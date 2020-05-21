@@ -40,12 +40,10 @@ def IsImageHasAnomaly(autoencoder,filePath,threshold):
 # # set threshold manually
 # threshold=4 #0.14
 
-# IsImageHasAnomaly(autoencoder, '/home/inavan/Documents/Anomaly/vgg-for-anomaly-detection-master/images/test/frame38m.jpg',threshold)#correct_cup1.pn
-
 def main():
-    autoencoder.load_weights('autoencoder-vgg-050520.h5')
+    autoencoder.load_weights('autoencoder-vgg.h5')
 
-    videopath = 'Qtcam-20_04_20:09_45_09.avi' # 
+    videopath = 'video.avi' # 
     outpath = './output.avi'
 
     vid = cv2.VideoCapture(videopath)
